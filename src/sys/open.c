@@ -24,7 +24,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-int _open_r _PARAMS ((struct _reent *r, const char *file, int flags, int mode))
+int _open_r (struct _reent *r, const char *file, int flags, int mode)
 {
    int i;
    int device=-1;
