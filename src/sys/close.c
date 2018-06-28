@@ -22,7 +22,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-int _close_r _PARAMS ((struct _reent *r, int fd))
+int _close_r (struct _reent *r, int fd)
 {
    int device = fd >> 16;
    return devoptab_list[device]->close(r, fd & 0xFFFF);

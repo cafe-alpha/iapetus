@@ -22,7 +22,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-_ssize_t _read_r _PARAMS ((struct _reent *r, int fd, void *ptr, size_t len))
+_ssize_t _read_r (struct _reent *r, int fd, void *ptr, size_t len)
 {
    int device = fd >> 16;
    return devoptab_list[device]->read(r, fd & 0xFFFF, ptr, len);

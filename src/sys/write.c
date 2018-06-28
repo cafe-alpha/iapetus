@@ -22,7 +22,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-_ssize_t _write_r _PARAMS ((struct _reent *r, int fd, const void *ptr, size_t len))
+_ssize_t _write_r (struct _reent *r, int fd, const void *ptr, size_t len)
 {
    int device = fd >> 16;
    return devoptab_list[device]->write(r, fd & 0xFFFF, ptr, len);
